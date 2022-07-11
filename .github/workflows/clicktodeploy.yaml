@@ -14,7 +14,7 @@ jobs:
       
       - name: Install bazel
         run: |
-          wget https://github.com/bazelbuild/bazel/releases/download/0.19.1/bazel-0.19.1-installer-linux-x86_64.sh
+          wget https://github.com/bazelbuild/bazel/releases/download/0.13.0/bazel-0.13.0-installer-linux-x86_64.sh
           chmod +x bazel-0.19.1-installer-linux-x86_64.sh
           ./bazel-0.19.1-installer-linux-x86_64.sh --user
           echo 'export PATH="$PATH:$HOME/bin' >> ~/.bashrc
@@ -22,7 +22,6 @@ jobs:
       - name: Clone repo runtimes common
         run: |
           git clone https://github.com/GoogleCloudPlatform/runtimes-common.git
-          cd runtimes-common
 
       - name: Build gazelle
         run: |
