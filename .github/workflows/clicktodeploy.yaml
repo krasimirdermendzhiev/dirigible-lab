@@ -26,4 +26,5 @@ jobs:
 
       - name: Build gazelle
         run: |
+          cd runtimes-common
           bazel run //:gazelle
