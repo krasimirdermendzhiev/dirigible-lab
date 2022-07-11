@@ -5,12 +5,14 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Install required packages
         run: |
           sudo apt-get install pkg-config zip g++ zlib1g-dev unzip python
+          sudo apt-get install python-is-python3
+          sudo apt-get install python-devel
       
       - name: Install bazel
         run: |
