@@ -22,7 +22,7 @@ jobs:
       - name: Clone repo runtimes common
         run: |
           git clone https://github.com/GoogleCloudPlatform/runtimes-common.git
-
+          curl -LO https://storage.googleapis.com/idiff/v0.1.0/iDiff-linux-amd64 && mv iDiff-linux-amd64 iDiff && chmod +x iDiff && sudo mv iDiff /usr/local/bin/
       - name: Build gazelle
         run: |
           cd runtimes-common
